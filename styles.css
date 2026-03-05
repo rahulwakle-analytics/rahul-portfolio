@@ -1,245 +1,262 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
 }
 
-/* BODY */
-body {
-    font-family: Arial, sans-serif;
-    color: white;
-    background: linear-gradient(135deg, #0a0a0f, #111827, #0a0a0f);
-    overflow-x: hidden;
+body{
+
+background:#0a0a0f;
+color:white;
+
 }
+
 
 /* NAVBAR */
-.navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 80px;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
+
+.navbar{
+
+position:fixed;
+top:0;
+width:100%;
+padding:20px 80px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:black;
+
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: 600;
+.nav-menu{
+
+display:flex;
+gap:30px;
+list-style:none;
+
 }
 
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 35px;
+.nav-link{
+
+color:#aaa;
+text-decoration:none;
+
 }
 
-.nav-link {
-    text-decoration: none;
-    color: #ccc;
-    transition: 0.3s;
+.nav-link:hover{
+
+color:#00bfff;
+
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: #00bfff;
+.resume-btn{
+
+background:#ff6600;
+padding:8px 20px;
+border-radius:6px;
+color:white;
+text-decoration:none;
+
 }
 
-/* RESUME BUTTON */
-.resume-btn {
-    padding: 8px 18px;
-    border-radius: 6px;
-    text-decoration: none;
-    background: linear-gradient(135deg, #ff5500, #ff8800);
-    color: white;
-    font-size: 14px;
-}
 
 /* HERO */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 80px;
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+align-items:center;
+
+padding:0 80px;
+
 }
 
-.hero-content {
-    max-width: 700px;
+.hero h1{
+
+font-size:60px;
+
 }
 
-.hero h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
+.hero h2{
+
+margin-top:10px;
+color:#aaa;
+
 }
 
-.hero h2 {
-    font-size: 22px;
-    color: #ccc;
-    margin-bottom: 25px;
+.hero p{
+
+margin-top:20px;
+max-width:600px;
+
 }
 
-.highlight {
-    color: #4da3ff;
+.hero-buttons{
+
+margin-top:30px;
+display:flex;
+gap:20px;
+
 }
 
-.hero p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #aaa;
+.btn{
+
+padding:12px 26px;
+border-radius:6px;
+text-decoration:none;
+
 }
 
-/* BUTTONS */
-.hero-buttons {
-    display: flex;
-    gap: 20px;
+.primary{
+
+background:#ff6600;
+color:white;
+
 }
 
-.btn {
-    padding: 12px 26px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.3s;
+.secondary{
+
+border:1px solid #555;
+color:white;
+
 }
 
-.primary {
-    background: linear-gradient(135deg, #ff5500, #ff8800);
-    color: white;
-}
-
-.secondary {
-    border: 1px solid #555;
-    color: white;
-}
 
 /* SECTIONS */
-section {
-    padding: 120px 80px;
-    max-width: 1200px;
-    margin: auto;
+
+section{
+
+padding:120px 80px;
+
+opacity:0;
+transform:translateY(40px);
+
 }
 
-section h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+section.show{
+
+opacity:1;
+transform:translateY(0);
+transition:0.8s;
+
 }
+
 
 /* PROJECTS */
-.projects-grid {
-    display: grid;
-    gap: 30px;
+
+.projects-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
 }
 
-.card {
-    background: #1a1a1a;
-    padding: 25px;
-    border-radius: 10px;
-    transition: 0.3s;
+.card{
+
+background:#1a1a1a;
+padding: 18px;
+border-radius:10px;
+max-width: 350px;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    border: 1px solid #00bfff;
+.card:hover{
+
+transform:translateY(-6px);
+
 }
+
+.project-image{
+
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+
+}
+
 
 /* SKILLS */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
+
+.skills-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:15px;
+
 }
 
-.skills-grid div {
-    background: #1a1a1a;
-    padding: 12px;
-    text-align: center;
-    border-radius: 6px;
-} 
-/* =========================
-   GLOBAL SMOOTH TRANSITION
-========================= */
-* {
-  transition: all 0.3s ease;
+.skill-box{
+
+background:#151515;
+padding:12px;
+text-align:center;
+border-radius:6px;
+
 }
 
-/* =========================
-   NAV LINK GLOW
-========================= */
-.nav-link:hover,
-.nav-link.active {
-  color: #00bfff;
-  text-shadow: 
-      0 0 5px #00bfff,
-      0 0 10px #00bfff,
-      0 0 20px #0066ff;
+.skill-box:hover{
+
+border:1px solid #00bfff;
+
 }
 
-/* =========================
-   BUTTON GLOW
-========================= */
-.btn:hover,
-.resume-btn:hover {
-  box-shadow: 
-      0 0 10px #00bfff,
-      0 0 20px #00bfff,
-      0 0 40px #0066ff;
-  transform: translateY(-3px);
+
+/* TYPING */
+
+.typing::after{
+
+content:"|";
+animation:blink 1s infinite;
+
 }
 
-/* =========================
-   CARD GLOW
-========================= */
-.card:hover {
-  transform: translateY(-8px);
-  border: 1px solid #00bfff;
-  box-shadow: 
-      0 0 15px rgba(0, 191, 255, 0.4),
-      0 0 30px rgba(0, 102, 255, 0.3);
+@keyframes blink{
+
+0%{opacity:1}
+50%{opacity:0}
+100%{opacity:1}
+
+}
+.popup{
+
+display:none;
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.9);
+
+justify-content:center;
+align-items:center;
+
+z-index:999;
+
 }
 
-/* =========================
-   SKILL BOX GLOW
-========================= */
-.skills-grid div:hover {
-  border: 1px solid #00bfff;
-  box-shadow: 
-      0 0 10px #00bfff,
-      0 0 20px rgba(0, 191, 255, 0.5);
-  transform: scale(1.05);
+.popup img{
+
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+
 }
 
-/* =========================
-   HERO HIGHLIGHT GLOW
-========================= */
-.highlight {
-  color: #00bfff;
-  text-shadow: 
-      0 0 10px #00bfff,
-      0 0 20px #0066ff;
-} 
-/* SCROLL REVEAL */
-section {
-  opacity: 0;
-  transform: translateY(40px);
-}
+.close{
 
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.8s ease;
-}
-.typing::after {
-  content: "|";
-  margin-left: 5px;
-  animation: blink 1s infinite;
-}
+position:absolute;
+top:30px;
+right:40px;
 
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+font-size:40px;
+color:white;
+cursor:pointer;
+
 }
