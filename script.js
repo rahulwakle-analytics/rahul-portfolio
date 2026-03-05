@@ -1,6 +1,3 @@
-  // =======================
-// PROJECT DATA
-// =======================
 
 const projects = [
 
@@ -20,9 +17,6 @@ link: "https://raw.githubusercontent.com/rahulwakle-analytics/rahul-portfolio/ma
 
 ];
 
-// =======================
-// SKILLS
-// =======================
 
 const skills = [
 
@@ -35,12 +29,6 @@ const skills = [
 "Data Modeling"
 
 ];
-
-
-
-// =======================
-// RENDER PROJECTS
-// =======================
 
 const projectsContainer = document.getElementById("projectsContainer");
 
@@ -65,12 +53,6 @@ projectsContainer.appendChild(card);
 
 });
 
-
-
-// =======================
-// RENDER SKILLS
-// =======================
-
 const skillsContainer = document.getElementById("skillsContainer");
 
 skills.forEach(skill => {
@@ -86,10 +68,6 @@ skillsContainer.appendChild(box);
 });
 
 
-
-// =======================
-// NAVIGATION SMOOTH
-// =======================
 
 document.querySelectorAll(".nav-link").forEach(link => {
 
@@ -107,11 +85,6 @@ behavior:"smooth"
 
 });
 
-
-
-// =======================
-// SCROLL REVEAL
-// =======================
 
 const sections = document.querySelectorAll("section");
 
@@ -131,11 +104,6 @@ section.classList.add("show");
 
 });
 
-
-
-// =======================
-// TYPING EFFECT
-// =======================
 
 const typingElement = document.querySelector(".typing");
 
@@ -202,3 +170,4 @@ function closePopup(){
 document.getElementById("popup").style.display = "none";
 
 }
+
